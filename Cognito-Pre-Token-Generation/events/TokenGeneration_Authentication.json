@@ -1,0 +1,32 @@
+{
+    "version": "1",
+    "triggerSource": "TokenGeneration_Authentication",
+    "region": "us-east-1",
+    "userPoolId": "us-east-1_yiC9qyuvT",
+    "userName": "236f452b-9a55-417d-b295-05c4405736bf",
+    "callerContext": {
+      "awsSdkVersion": "aws-sdk-unknown-unknown",
+      "clientId": "3c8ij169hg8j3dfq1og19eu5mk"
+    },
+    "request": {
+      "userAttributes": {
+        "sub": "519fac15-1f15-425b-8993-308d56b532e4",
+        "cognito:user_status": "CONFIRMED",
+        "email_verified": "True",
+        "name": "Mauro",
+        "preferred_username": "maurorectest010@mailinator.com",
+        "given_name": "234234",
+        "email": "maurorectest010@mailinator.com",
+        "custom:RECOMMENDERID": "10008053"
+      },
+      "groupConfiguration": {
+        "groupsToOverride": [],
+        "iamRolesToOverride": [],
+        "preferredRole": null
+      }
+    },
+    "response": {
+      "claimsOverrideDetails": null
+    }
+  }
+  
