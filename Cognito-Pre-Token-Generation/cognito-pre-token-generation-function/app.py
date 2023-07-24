@@ -27,7 +27,8 @@ def dateconverter(o):
         return o.__repr__()
         
 def lambda_handler(event, context):
-    #print(event)
+    print('event: ')
+    print(event)
     if event['triggerSource'] == 'TokenGeneration_RefreshTokens':
         #decrpt the connection string
         session = boto3.session.Session()
@@ -63,7 +64,8 @@ def lambda_handler(event, context):
             print('Http code: {}'.format(err.response['ResponseMetadata']['HTTPStatusCode']))
             print('RetryAttempts: {}'.format(err.response['ResponseMetadata']['RetryAttempts']))
             
-        #print(response['Devices'])
+        print('response[Devices]: ')
+        print(response['Devices'])
         Ks=response['Devices']
         for Device in Ks:
             DeviceKey=Device['DeviceKey']
@@ -92,7 +94,8 @@ def lambda_handler(event, context):
             #list.append(UserInfo('', '','',datetime.utcnow(),event['request']['userAttributes']['preferred_username'],event['request']['userAttributes']['custom:APPLICANTID']))
         
         list=sorted(list, key=lambda d: d.DeviceLastAuthenticatedDate, reverse=True)
-        #print(json.dumps(list[0].__dict__, default = dateconverter))
+        print('list: ')
+        print(json.dumps(list[0].__dict__, default = dateconverter))
     
         
         # Open database connection
