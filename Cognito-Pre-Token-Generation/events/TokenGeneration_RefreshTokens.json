@@ -1,0 +1,32 @@
+{
+    "version": "1",
+    "triggerSource": "TokenGeneration_RefreshTokens",
+    "region": "us-east-1",
+    "userPoolId": "us-east-1_xO8eGi5x6",
+    "userName": "e58d9f8a-fc42-4756-a628-86d9792fbfef",
+    "callerContext": {
+        "awsSdkVersion": "aws-sdk-unknown-unknown",
+        "clientId": "n41hhgcgis9imhjicljbpq9fh"
+    },
+    "request": {
+        "userAttributes": {
+            "cognito:token_nbf": "1689952756515",
+            "sub": "96283634-e546-4818-9c41-221f27508641",
+            "cognito:user_status": "CONFIRMED",
+            "email_verified": "True",
+            "name": "Wege",
+            "preferred_username": "wkifle@commonapp.org",
+            "given_name": "AKifle",
+            "email": "wkifle@commonapp.org",
+            "custom:USERPROFILEID": "7709"
+        },
+        "groupConfiguration": {
+            "groupsToOverride": [],
+            "iamRolesToOverride": [],
+            "preferredRole": null
+        }
+    },
+    "response": {
+        "claimsOverrideDetails": null
+    }
+}

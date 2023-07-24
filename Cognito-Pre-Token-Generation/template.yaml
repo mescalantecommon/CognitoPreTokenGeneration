@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  alpha23CognitoPreTokenGeneration:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.8
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 30
+      Role: 'arn:aws:iam::572092343279:role/alpha23.lambda.cognito-pre-token-gen'
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-060c9f04a72f31923
+        SubnetIds:
+          - subnet-0ad040fd03a737df0
+          - subnet-005ff83ff8dac51bb
+          - subnet-05fdc3485bff835ef
+      Environment:
+        Variables:
+          AppRuntimeEnvironment: alpha
+          secrets: >-
+            AQICAHh97qSMhW/0IsDT89olhEiDd3ufx10SHy+C0Ba6rufTSwELDprVnO4BZNS57YBcZxN/AAABozCCAZ8GCSqGSIb3DQEHBqCCAZAwggGMAgEAMIIBhQYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxSSXwRDj4WdwFemqECARCAggFWIR7j/6cf7bYpUW/rTocht1FUeYrnkhkftEBSovTYA5EGFxH1gljcRSEhKNKCe4W2Ndt/aFBpJfexh1Qt9WJ3/uQvRO4A6CP6cGE0HfbmwObb+P6E4XuOE5q9bfsTl6Z3GOlzxSi8grlWNzaok0y0Gb7AVEE/j8u5itZ8/SDGFTKw/cvWEvg1geWQmTn6EJHdaBQRE8VWCrL4KUSSmJ7NiQ1ug68JylzoLnfgg5Kmmxuh+F4Yr4SqBOYrCreEblIey5VKTo/DI1S6ODogknGdgDKcGMPxMTT/zp0a52v0m52tHqAXI6aJ8RrlbI16o0rs3LNCXv584aKIiRYpp9BH5sNoWBnE99Jypct2OjE0olU40UCobqFGCTQSi21v+ynMRLxyDXgu9jREHrmr3a+hlONpmspj8Huimc5yB9vxWPFo1S8i13b/QbZBsEC91lxvPHC64Jyp
+      Tags:
+        EnvironmentCost: alpha
+        'lambda:createdBy': SAM
+      Layers:
+        - 'arn:aws:lambda:us-east-1:572092343279:layer:alphaPython3Pymysql:3'
+      RuntimeManagementConfig:
+        UpdateRuntimeOn: Auto
